@@ -18,6 +18,7 @@
             $image = get_sub_field('header_bg');
             $subtitle = get_sub_field('subtitle');
             $title = get_sub_field('title');
+            $link = get_sub_field('link');
             $button = get_sub_field('button');
             ?>
           <li data-transition="fade" data-thumb="<?php echo $image; ?>"><img src="<?php echo $image; ?>" alt="" />
@@ -64,7 +65,7 @@
                 data-endslide="3"
                 data-responsive="on" 
                 data-responsive_offset="on" 
-                style="z-index: 9;" href="#"><?php echo $button; ?>
+                style="z-index: 9;" href="<?php echo $link; ?>"><?php echo $button; ?>
               </a> 
           </li>
           <?php endwhile; ?>
@@ -80,7 +81,7 @@
   <section id="intro">
     <div class="wrapper dark-wrapper inverse-text">
       <div class="container inner">
-        <h2 class="color-dark mb-20 text-center">About Me</h2>
+        <h2 class="color-dark mb-20 text-center text-uppercase">About Me</h2>
         <p class="lead text-center">Hello! I'm Julia Brailie, I'm specializing in wedding and portrait photography,<br class="d-none d-md-block" />
           based in London. I love to turn ideas into beautiful things.</p>
         <div class="space30"></div>
@@ -107,7 +108,7 @@
                 <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/about14.jpg" alt=""></figure>
               </div>
               <div class="col-md-7">
-                <p><span class="dropcap color-teal">N</span>ulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies ut.</p>
+                <p><span class="dropcap color-red">N</span>ulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies ut.</p>
                 <footer class="blockquote-footer">Connor Gibson</footer>
               </div>
               <!-- /column --> 
@@ -173,11 +174,11 @@
       <div class="container inner">
         <div id="cube-grid-filter" class="cbp-filter-container text-center">
           <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-          <div data-filter=".commercial" class="cbp-filter-item">Commercial</div>
-          <div data-filter=".conceptual" class="cbp-filter-item">Conceptual</div>
-          <div data-filter=".interior" class="cbp-filter-item">Interior</div>
-          <div data-filter=".macro" class="cbp-filter-item">Macro</div>
-          <div data-filter=".video" class="cbp-filter-item">Video</div>
+          <div data-filter=".iphone" class="cbp-filter-item">iPhone</div>
+          <div data-filter=".DSLR" class="cbp-filter-item">Camera</div>
+          <div data-filter=".nature" class="cbp-filter-item">Nature</div>
+          <div data-filter=".object" class="cbp-filter-item">Object</div>
+          <div data-filter=".bw" class="cbp-filter-item">B&W</div>
         </div>
         <div class="clearfix"></div>
         <div class="space20"></div>
@@ -218,7 +219,8 @@
           <!-- /.swiper-container --> 
         </div>
         <!-- /.swiper-container-wrapper --> 
-        <a href="https://www.instagram.com/urbanshots/" target="_blank" class="btn btn-full">Follow me @ Instagram</a> </div>
+        <a href="https://www.instagram.com/ailurophile_n/" target="_blank" class="btn btn-full">Follow me @ Instagram</a>
+      </div>
       <!-- /.instagram-wrapper --> 
     </div>
   </section>

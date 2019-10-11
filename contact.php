@@ -12,7 +12,8 @@
   <section id="main-header">
     <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg4.jpg">
       <div class="container inner pt-120 pb-120 text-center">
-        <h1 class="heading mb-0">About Us</h1>
+        <h1 class="heading mb-0">Want to have a chat?</h1>
+        <p>Leave me a message about your thoughts, and I will get back to you.</p>
       </div>
       <!-- /.container --> 
     </div>
@@ -22,13 +23,13 @@
   <section id="form">
     <div class="wrapper dark-wrapper inverse-text">
       <div class="container inner">
-        <div class="row">
-          <div class="col-md-8">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
             <h2 class="section-title">Get in Touch</h2>
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat.</p>
             <div class="space10"></div>
             <div class="form-container">
-              <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate>
+              <form action="<?php echo get_stylesheet_directory_uri(); ?>/contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate>
                 <div class="row text-center">
                   <div class="col-md-6 pr-10">
                     <div class="form-group">
@@ -44,14 +45,7 @@
                     <!--/.form-group --> 
                   </div>
                   <!--/column -->
-                  <div class="col-md-6 pr-10">
-                    <div class="form-group">
-                      <input type="tel" class="form-control" name="tel" placeholder="Phone">
-                    </div>
-                    <!--/.form-group --> 
-                  </div>
-                  <!--/column -->
-                  <div class="col-md-6 pl-10">
+                  <div class="col-md-12">
                     <div class="form-group">
                       <input type="text" class="form-control" name="subject" placeholder="Subject">
                     </div>
@@ -78,8 +72,8 @@
               <h5 class="widget-title">Address</h5>
               <p>Fusce dapibus, tellus commodo, tortor mauris condimentum utellus fermentum, porta sem malesuada magna. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur.</p>
               <ul class="icon-list">
-                <li><i class="fa fa-map"></i>Moonshine St. 14/05 Light City</li>
-                <li><i class="fa fa-envelope"></i><a href="mailto:first.last@email.com" class="nocolor">first.last@email.com</a></li>
+                <li><i class="fa fa-map"></i>Australia 108. <br>70 Southbank Boulevard, Southbank 3006</li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:first.last@email.com" class="nocolor">imailboxneil@email.com</a></li>
                 <li><i class="fa fa-phone-square"></i>+00 (123) 456 78 90 </li>
               </ul>
             </div>

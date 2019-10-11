@@ -50,7 +50,7 @@ $vf_config = array(
      * E.g. Multiple recipients
      * 'emailRecipients' => 'john@domain.com, andy@domain.com',
      */
-    'emailRecipients' => 'pashaysuz@gmail.com',
+    'emailRecipients' => 'imailboxneil@gmail.com',
 
     /**
      * If is not empty it sets a header From in e-mail message (sets sender e-mail).
@@ -59,7 +59,7 @@ $vf_config = array(
      * E.g. Single recipient
      * 'emailSender' => 'john@domain.com',
      */
-    'emailSender' => 'john@domain.com'
+    'emailSender' => ''
     /*** /Code Snippet - quick-start ***/
 );
 $vfSender = new MailSender($vf_config);

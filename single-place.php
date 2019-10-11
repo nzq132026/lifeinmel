@@ -14,19 +14,21 @@
     <div class="rev_slider_wrapper">
       <div id="slider16" class="rev_slider" data-version="5.4.7">
         <ul>
+          <?php if( have_rows('main_header') ): ?>
           <li data-transition="fade" data-filmstrip='{
-          "direction":"left-to-right",
+          "direction":"right-to-left",
           "filter": "none",
-          "times": "100,100,100,100",
+          "times": "80,80,80,80",
           "imgs":[ 
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe1.jpg", "alt": "Image 1"}, 
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe2.jpg", "alt": "Image 2"}, 
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe3.jpg", "alt": "Image 3"}, 
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe4.jpg", "alt": "Image 4"}, 
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe5.jpg", "alt": "Image 5"},
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe6.jpg", "alt": "Image 6"},
-              {"url": "<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/fe7.jpg", "alt": "Image 7"}
-          ]}'><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/dummy.png" alt="" />
+            <?php while( have_rows('main_header') ): the_row();
+              $image = get_sub_field('header_bg');
+              ?>
+              {"url": "<?php echo $image; ?>", "alt": ""},
+              <?php endwhile; ?>
+              {"url": "<?php the_field('main_header_last_slide'); ?>", "alt": ""} 
+          ]}'>
+          
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/dummy.png" alt="" />
             <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
            data-x="['center','center','center','center']"  
            data-y="['middle','middle','middle','middle']"  
@@ -52,9 +54,10 @@
           data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;fb:20px;","ease":"Power4.easeOut"}]'
           data-textAlign="['center','center','center','center']"
           data-lasttriggerstate="reset"
-          style="z-index: 6; color: rgba(255,255,255,0.6);">Food & Event<br />
-              Photographer</div>
+          style="z-index: 6; color: rgba(255,255,255,0.6);"><?php the_field('header_title'); ?><br />
+            <?php the_field('header_subtitle'); ?></div>
           </li>
+        <?php endif; ?>
         </ul>
         <div class="tp-bannertimer tp-bottom"></div>
       </div>
@@ -111,99 +114,36 @@
   <section id="gallery">
     <div class="wrapper dark-wrapper inverse-text">
       <div class="space30"></div>
-      <div id="cube-grid-mosaic-filter" class="cbp-filter-container text-center">
+      <div id="cube-grid-full-large-filter" class="cbp-filter-container text-center">
         <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-        <div data-filter=".cat1" class="cbp-filter-item">Category 1</div>
-        <div data-filter=".cat2" class="cbp-filter-item">Category 2</div>
-        <div data-filter=".cat3" class="cbp-filter-item">Category 3</div>
-        <div data-filter=".cat4" class="cbp-filter-item">Category 4</div>
-        <div data-filter=".cat5" class="cbp-filter-item">Category 5</div>
+        <div data-filter=".iphone" class="cbp-filter-item">iPhone</div>
+        <div data-filter=".DSLR" class="cbp-filter-item">Camera</div>
+        <div data-filter=".views" class="cbp-filter-item">Views</div>
+        <div data-filter=".things" class="cbp-filter-item">Things</div>
+        <div data-filter=".people" class="cbp-filter-item">People</div>
       </div>
       <div class="clearfix"></div>
       <div class="space20"></div>
-      <div id="cube-grid-mosaic" class="cbp light-gallery">
-        <div class="cbp-item cat1 cat5">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm1-full.jpg" data-sub-html="#caption1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm1.jpg" alt="" />
-            <div id="caption1" class="d-none">
-              <p>Cras mattis consectetur purus sit amet fermentum.</p>
+      <?php if( have_rows('gallery') ): ?>
+      <div id="cube-grid-full-large" class="cbp light-gallery">
+        <?php while( have_rows('gallery') ): the_row();
+            $image = get_sub_field('image');
+            $category = get_sub_field('category');
+            $description = get_sub_field('description');
+            ?>
+
+        <!-- Gallery item -->
+        <div class="cbp-item <?php echo $category; ?>">
+          <figure class="overlay overlay2"><a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>" alt="" />
+            <div id="caption<?php echo $image['id']; ?>" class="d-none">
+              <p><?php echo $description; ?></p>
             </div>
-            </a></figure>
+            </a>
+          </figure>
         </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat2">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm2-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm2.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat2 cat3">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm3-full.jpg" data-sub-html="#caption2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm3.jpg" alt="" />
-            <div id="caption2" class="d-none">
-              <p>Nulla vitae elit libero, a pharetra augue.</p>
-            </div>
-            </a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat1 cat5">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm4-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm4.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat5 cat4">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm5-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm5.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat2 cat3">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm6-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm6.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat5">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm7-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm7.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat1 cat5">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm8-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm8.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat2 cat4">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm9-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm9.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat1 cat2">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm10-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm10.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat5 cat3">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm11-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm11.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat5 cat2">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm12-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm12.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat4 cat3">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm13-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm13.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat1 cat2 cat5">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm14-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm14.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat3 cat4">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm15-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm15.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat1 cat5">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm16-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm16.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat2 cat3 cat4">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm17-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm17.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item -->
-        <div class="cbp-item cat1 cat4">
-          <figure class="overlay overlay2"><a href="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm18-full.jpg"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/pm18.jpg" alt="" /></a></figure>
-        </div>
-        <!--/.cbp-item --> 
+        <?php endwhile; ?>
       </div>
-      <!--/.cbp --> 
+    <?php endif; ?>
     </div>
   </section>
 

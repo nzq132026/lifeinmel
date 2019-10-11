@@ -81,7 +81,7 @@
   <section id="intro">
     <div class="wrapper dark-wrapper inverse-text">
       <div class="container inner">
-        <h2 class="color-dark mb-20 text-center text-uppercase">About Me</h2>
+        <h2 class="color-dark mb-20 text-center">About Me</h2>
         <p class="lead text-center">Hello! I'm Julia Brailie, I'm specializing in wedding and portrait photography,<br class="d-none d-md-block" />
           based in London. I love to turn ideas into beautiful things.</p>
         <div class="space30"></div>
@@ -176,8 +176,9 @@
           <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
           <div data-filter=".iphone" class="cbp-filter-item">iPhone</div>
           <div data-filter=".DSLR" class="cbp-filter-item">Camera</div>
-          <div data-filter=".nature" class="cbp-filter-item">Nature</div>
-          <div data-filter=".object" class="cbp-filter-item">Object</div>
+          <div data-filter=".nature" class="cbp-filter-item">Views</div>
+          <div data-filter=".object" class="cbp-filter-item">Things</div>
+          <div data-filter=".cat" class="cbp-filter-item">Cat</div>
           <div data-filter=".bw" class="cbp-filter-item">B&W</div>
         </div>
         <div class="clearfix"></div>
@@ -195,14 +196,14 @@
               <div id="caption<?php echo $image['id']; ?>" class="d-none">
                 <p><?php echo $description; ?></p>
               </div>
-              </a></figure>
+              </a>
+            </figure>
           </div>
           <?php endwhile; ?>
         </div>
         <?php endif; ?>
         <!--/.cbp -->
         <div class="space30"></div>
-        <div id="cube-grid-more" class="text-center"> <a href="<?php echo get_stylesheet_directory_uri(); ?>/ajax/loadmore2.html" class="cbp-l-loadMore-link btn btn-full-rounded" rel="nofollow"> <span class="cbp-l-loadMore-defaultText">Load More</span> <span class="cbp-l-loadMore-loadingText">Loading...</span> <span class="cbp-l-loadMore-noMoreLoading">No More Works</span> </a> </div>
       </div>
       <!-- /.container --> 
     </div>
@@ -219,8 +220,7 @@
           <!-- /.swiper-container --> 
         </div>
         <!-- /.swiper-container-wrapper --> 
-        <a href="https://www.instagram.com/ailurophile_n/" target="_blank" class="btn btn-full">Follow me @ Instagram</a>
-      </div>
+        <a href="https://www.instagram.com/ailurophile_n/" target="_blank" class="btn btn-full">Follow me @ Instagram</a> </div>
       <!-- /.instagram-wrapper --> 
     </div>
   </section>

@@ -1,6 +1,7 @@
 <?php
 namespace photography\theme\actions
 {
+    
     add_action( 'wp_enqueue_scripts', 'photography\theme\actions\wp_enqueue_scripts' );
     add_action( 'after_setup_theme', 'photography\theme\actions\after_setup_theme' );
 
@@ -17,6 +18,7 @@ namespace photography\theme\actions
         );
 
     }
+
 
     function after_setup_theme()
     {

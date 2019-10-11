@@ -58,25 +58,25 @@
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-photo_camera"></i> </div>
             <h3 class="value">7518</h3>
-            <p class="text-uppercase color-dark mb-0">Shots Taken</p>
+            <p class="text-uppercase color-dark mb-0">Days in Melbourne</p>
           </div>
           <!--/column -->
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-cafe_hot-coffee"></i> </div>
             <h3 class="value">3472</h3>
-            <p class="text-uppercase color-dark mb-0">Cups of Coffee</p>
+            <p class="text-uppercase color-dark mb-0">Shutter count</p>
           </div>
           <!--/column -->
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-electronics_tv"></i> </div>
             <h3 class="value">2184</h3>
-            <p class="text-uppercase color-dark mb-0">Movies Watched</p>
+            <p class="text-uppercase color-dark mb-0">Pictures taken</p>
           </div>
           <!--/column -->
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-sports_medal-2"></i> </div>
             <h3 class="value">4523</h3>
-            <p class="text-uppercase color-dark mb-0">Awards Won</p>
+            <p class="text-uppercase color-dark mb-0">Cat's age</p>
           </div>
           <!--/column --> 
         </div>
@@ -90,77 +90,61 @@
   <section id="equipment">
     <div class="wrapper dark-wrapper inverse-text">
       <div class="container inner">
-        <h2 class="section-title mb-40 text-center">Happy Customers</h2>
-        <div class="swiper-container-wrapper swiper-col3" data-aos="fade">
-          <div class="swiper-container text-center">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="box box-border">
-                  <blockquote class="icon icon-top">
-                    <p>Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula lacinia odio sem nec elit.</p>
-                    <footer class="blockquote-footer">Connor Gibson</footer>
-                  </blockquote>
-                </div>
-                <!-- /.box --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <div class="box box-border">
-                  <blockquote class="icon icon-top">
-                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam aenean lacinia.</p>
-                    <footer class="blockquote-footer">Coriss Ambady</footer>
-                  </blockquote>
-                </div>
-                <!-- /.box --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <div class="box box-border">
-                  <blockquote class="icon icon-top">
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam integer. Curabitur blandit tempus.</p>
-                    <footer class="blockquote-footer">Barclay Widerski</footer>
-                  </blockquote>
-                </div>
-                <!-- /.box --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <div class="box box-border">
-                  <blockquote class="icon icon-top">
-                    <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Porta ac consectetur.</p>
-                    <footer class="blockquote-footer">Connor Gibson</footer>
-                  </blockquote>
-                </div>
-                <!-- /.box --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <div class="box box-border">
-                  <blockquote class="icon icon-top">
-                    <p>Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla.</p>
-                    <footer class="blockquote-footer">Coriss Ambady</footer>
-                  </blockquote>
-                </div>
-                <!-- /.box --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <div class="box box-border">
-                  <blockquote class="icon icon-top">
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                    <footer class="blockquote-footer">Barclay Widerski</footer>
-                  </blockquote>
-                </div>
-                <!-- /.box --> 
-              </div>
-              <!-- /.swiper-slide --> 
+        <h2 class="section-title color-dark mb-20 text-center">Things I use to record life..</h2>
+        <p class="text-center">Hello! I'm Julia Brailie, I'm specializing in wedding and portrait photography,<br class="d-none d-md-block" />
+          based in London. I love to turn ideas into beautiful things.</p>
+          <div class="space60 d-none d-md-block"></div>
+          <div class="row">
+            <div class="col-md-4 pl-md-5 text-center">
+              <!-- <span class="icon icon-color color-default fs-48 mb-20">
+                <i class="si-cafe_fork-spoon-knife"></i>
+              </span> -->
+              <img class="avatar avatar-egg mb-30" src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg2.jpg" />
+              <h4>Food Photography</h4>
+              <p>Nulla vitae elit libero commodo non porta venanatis gravida eget metus egestas.</p>
             </div>
-            <!-- /.swiper-wrapper --> 
+            <div class="col-md-8 pl-md-5 justify-content-center"> 
+              <p class="lead larger">I'd like to give you a unique photography experience, capture your products with excellent composition and lighting skills.</p>
+              <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p><br><br>
+            </div>
+            <div class="space30 d-none d-md-block"></div>
+
+            <div class="col-md-4 pl-md-5 text-center">
+              <!-- <span class="icon icon-color color-default fs-48 mb-20">
+                <i class="si-cafe_fork-spoon-knife"></i>
+              </span> -->
+              <img class="avatar avatar-egg mb-30" src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg3.jpg" />
+              <h4>Food Photography</h4>
+              <p>Nulla vitae elit libero commodo non porta venanatis gravida eget metus egestas.</p>
+            </div>
+            <div class="col-md-8 pl-md-5 justify-content-center"> 
+              <p class="lead larger">I'd like to give you a unique photography experience, capture your products with excellent composition and lighting skills.</p>
+              <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p><br><br>
+            </div>
+            <div class="space30 d-none d-md-block"></div>
+
+            <div class="col-md-4 pl-md-5 text-center">
+              <!-- <span class="icon icon-color color-default fs-48 mb-20">
+                <i class="si-cafe_fork-spoon-knife"></i>
+              </span> -->
+              <img class="avatar avatar-egg mb-30" src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg4.jpg" />
+              <h4>Food Photography</h4>
+              <p>Nulla vitae elit libero commodo non porta venanatis gravida eget metus egestas.</p>
+            </div>
+            <div class="col-md-8 pl-md-5 justify-content-center"> 
+              <p class="lead larger">I'd like to give you a unique photography experience, capture your products with excellent composition and lighting skills.</p>
+              <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p><br><br>
+            </div>
+            <div class="space30 d-none d-md-block"></div>
+              </div>
+              <!--/.row --> 
+            </div>
+            <!--/column --> 
           </div>
-          <!-- .swiper-container -->
-          <div class="swiper-pagination gap-large"></div>
-        </div>
-        <!-- .swiper-container-wrapper --> 
+        <!--/.row --> 
       </div>
       <!-- /.container --> 
     </div>

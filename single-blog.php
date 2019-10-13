@@ -13,7 +13,7 @@
 
   <!-- Main Header Section -->
   <section id="main-header">
-    <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg2.jpg">
+    <div class="wrapper image-wrapper bg-image inverse-text fixed" data-image-src="<?php echo the_post_thumbnail_url('full'); ?>">
       <div class="container inner pt-120 pb-120 text-center">
         <h1 class="heading mb-0"><?php echo get_the_title(); ?></h1>
       </div>
@@ -88,9 +88,9 @@
           <aside class="col-md-4 sidebar">
             <!-- About Me Widget --> 
             <div class="sidebox widget">
-              <h3 class="widget-title">About Us</h3>
-              <figure class="mb-20"><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/about.jpg" alt="" /></figure>
-              <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. Nulla vitae elit libero, a pharetra augue. Donec id elit.</p>
+              <h3 class="widget-title"><?php the_field('feature_title'); ?></h3>
+              <figure class="mb-20"><img src="<?php the_field('feature_img'); ?>" alt="" /></figure>
+              <p><?php the_field('feature'); ?></p>
               <ul class="social social-color social-s">
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>

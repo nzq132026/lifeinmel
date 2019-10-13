@@ -105,7 +105,7 @@
             <div class="space10"></div>
             <div class="row">
               <div class="col-md-5">
-                <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/about14.jpg" alt=""></figure>
+                <figure><img src="<?php the_field('parallax_bg'); ?>" alt=""></figure>
               </div>
               <div class="col-md-7">
                 <p><span class="dropcap color-red">N</span>ulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies ut.</p>

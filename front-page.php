@@ -105,7 +105,7 @@
             <div class="space10"></div>
             <div class="row">
               <div class="col-md-5">
-                <figure><img src="<?php the_field('parallax_bg'); ?>" alt=""></figure>
+                <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/about14.jpg" alt=""></figure>
               </div>
               <div class="col-md-7">
                 <p><span class="dropcap color-red">N</span>ulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies ut.</p>
@@ -124,35 +124,28 @@
 
   <!-- Parallax Section -->
   <section id="parallax">
-    <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg9.jpg">
+    <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php the_field('parallax_bg') ?>">
       <div class="container inner pt-120 pb-120">
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
             <div class="swiper-container-wrapper basic-slider">
               <div class="swiper-container text-center">
+                <?php if( have_rows('parallax_text') ): ?>
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <blockquote class="icon icon-top larger">
-                      <p>Consectetur adipiscing elit. Duis mollis, est non commodo luctus gestas eget quam integer. Curabitur blandit tempus rutrum faucibus.</p>
-                      <footer class="blockquote-footer">Connor Gibson</footer>
-                    </blockquote>
-                  </div>
-                  <!-- /.swiper-slide -->
-                  <div class="swiper-slide">
-                    <blockquote class="icon icon-top larger">
-                      <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio.</p>
-                      <footer class="blockquote-footer">Coriss Ambady</footer>
-                    </blockquote>
-                  </div>
-                  <!-- /.swiper-slide -->
-                  <div class="swiper-slide">
-                    <blockquote class="icon icon-top larger">
-                      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis.</p>
-                      <footer class="blockquote-footer">Barclay Widerski</footer>
-                    </blockquote>
-                  </div>
-                  <!-- /.swiper-slide --> 
+                  <?php while( have_rows('parallax_text') ): the_row();
+                      $text = get_sub_field('text');
+                      $author = get_sub_field('author');
+                    ?>
+                    <!-- Parallax Paragraphs -->
+                    <div class="swiper-slide">
+                      <blockquote class="icon icon-top larger">
+                        <p><?php echo $text; ?></p>
+                        <footer class="blockquote-footer"><?php echo $author; ?></footer>
+                      </blockquote>    
+                    </div>
+                  <?php endwhile; ?>
                 </div>
+                <?php endif; ?>
                 <!-- /.swiper-wrapper --> 
               </div>
               <!-- /.swiper-container -->
@@ -174,11 +167,11 @@
       <div class="container inner">
         <div id="cube-grid-filter" class="cbp-filter-container text-center">
           <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-          <div data-filter=".iphone" class="cbp-filter-item">iPhone</div>
-          <div data-filter=".DSLR" class="cbp-filter-item">Camera</div>
-          <div data-filter=".nature" class="cbp-filter-item">Views</div>
-          <div data-filter=".object" class="cbp-filter-item">Things</div>
-          <div data-filter=".cat" class="cbp-filter-item">Cat</div>
+          <div data-filter=".iphone" class="cbp-filter-item">By iPhone</div>
+          <div data-filter=".camera" class="cbp-filter-item">By Camera</div>
+          <div data-filter=".views" class="cbp-filter-item">Views</div>
+          <div data-filter=".things" class="cbp-filter-item">Things</div>
+          <div data-filter=".people" class="cbp-filter-item">People</div>
           <div data-filter=".bw" class="cbp-filter-item">B&W</div>
         </div>
         <div class="clearfix"></div>
@@ -189,7 +182,7 @@
             $image = get_sub_field('gallery_img');
             $category = get_sub_field('category');
             $description = get_sub_field('description');
-            ?>
+          ?>
           <!-- Gallery item -->
           <div class="cbp-item <?php echo $category; ?>">
             <figure class="overlay overlay2"><a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>" alt="" />

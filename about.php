@@ -11,7 +11,8 @@
   <section id="main-header">
     <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg4.jpg">
       <div class="container inner pt-120 pb-120 text-center">
-        <h1 class="heading mb-0">About Us</h1>
+        <h1 class="heading mb-0">About Me</h1>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
       </div>
       <!-- /.container --> 
     </div>
@@ -57,7 +58,12 @@
         <div class="row counter">
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-photo_camera"></i> </div>
-            <h3 class="value">7518</h3>
+            <?php 
+              $now = time();
+              $your_date = strtotime("2010-01-26");
+              $datediff = $now - $your_date;
+             ?>
+            <h3 class="value"><?php echo round($datediff/86408); ?></h3>
             <p class="text-uppercase color-dark mb-0">Days in Melbourne</p>
           </div>
           <!--/column -->
@@ -75,8 +81,13 @@
           <!--/column -->
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-sports_medal-2"></i> </div>
-            <h3 class="value">4523</h3>
-            <p class="text-uppercase color-dark mb-0">Cat's age</p>
+            <?php 
+              $now = time();
+              $cat_date = strtotime("2018-10-06");
+              $datediff = $now - $cat_date;
+             ?>
+            <h3 class="value"><?php echo round($datediff/86408); ?></h3>
+            <p class="text-uppercase color-dark mb-0">Days cat aged</p>
           </div>
           <!--/column --> 
         </div>
@@ -94,52 +105,28 @@
         <p class="text-center">Hello! I'm Julia Brailie, I'm specializing in wedding and portrait photography,<br class="d-none d-md-block" />
           based in London. I love to turn ideas into beautiful things.</p>
           <div class="space60 d-none d-md-block"></div>
-          <div class="row">
-            <div class="col-md-4 pl-md-5 text-center">
-              <!-- <span class="icon icon-color color-default fs-48 mb-20">
-                <i class="si-cafe_fork-spoon-knife"></i>
-              </span> -->
-              <img class="avatar avatar-egg mb-30" src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg2.jpg" />
-              <h4>Food Photography</h4>
-              <p>Nulla vitae elit libero commodo non porta venanatis gravida eget metus egestas.</p>
-            </div>
-            <div class="col-md-8 pl-md-5 justify-content-center"> 
-              <p class="lead larger">I'd like to give you a unique photography experience, capture your products with excellent composition and lighting skills.</p>
-              <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p><br><br>
-            </div>
-            <div class="space30 d-none d-md-block"></div>
-
-            <div class="col-md-4 pl-md-5 text-center">
-              <!-- <span class="icon icon-color color-default fs-48 mb-20">
-                <i class="si-cafe_fork-spoon-knife"></i>
-              </span> -->
-              <img class="avatar avatar-egg mb-30" src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg3.jpg" />
-              <h4>Food Photography</h4>
-              <p>Nulla vitae elit libero commodo non porta venanatis gravida eget metus egestas.</p>
-            </div>
-            <div class="col-md-8 pl-md-5 justify-content-center"> 
-              <p class="lead larger">I'd like to give you a unique photography experience, capture your products with excellent composition and lighting skills.</p>
-              <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p><br><br>
-            </div>
-            <div class="space30 d-none d-md-block"></div>
-
-            <div class="col-md-4 pl-md-5 text-center">
-              <!-- <span class="icon icon-color color-default fs-48 mb-20">
-                <i class="si-cafe_fork-spoon-knife"></i>
-              </span> -->
-              <img class="avatar avatar-egg mb-30" src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg4.jpg" />
-              <h4>Food Photography</h4>
-              <p>Nulla vitae elit libero commodo non porta venanatis gravida eget metus egestas.</p>
-            </div>
-            <div class="col-md-8 pl-md-5 justify-content-center"> 
-              <p class="lead larger">I'd like to give you a unique photography experience, capture your products with excellent composition and lighting skills.</p>
-              <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p><br><br>
-            </div>
-            <div class="space30 d-none d-md-block"></div>
+          <?php if( have_rows('equipments') ): ?>
+            <div class="row">
+              <?php while( have_rows('equipments') ): the_row();
+                $equip_img = get_sub_field('equip_img');
+                $title = get_sub_field('title');
+                $subtitle = get_sub_field('subtitle');
+                $lead_text = get_sub_field('lead_text');
+                $text = get_sub_field('text');
+                ?>
+              <div class="col-md-4 pl-md-5 text-center">
+                <img class="avatar avatar-egg mb-30" style="filter: grayscale(100%);" src="<?php echo $equip_img; ?>"/>
+                <h4><?php echo $title; ?></h4>
+                <p><?php echo $subtitle; ?></p>
               </div>
+              <div class="col-md-8 pl-md-5 justify-content-center"> 
+                <p class="lead larger"><?php echo $lead_text; ?></p>
+                <p><?php echo $text; ?></p><br><br>
+              </div>
+              <div class="space30 d-none d-md-block"></div>
+              <?php endwhile; ?>
+            </div>
+           <?php endif; ?>
               <!--/.row --> 
             </div>
             <!--/column --> 

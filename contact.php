@@ -70,7 +70,6 @@
           <aside class="col-md-4 sidebar">
             <div class="sidebox widget">
               <h5 class="widget-title">Address</h5>
-              <p>Fusce dapibus, tellus commodo, tortor mauris condimentum utellus fermentum, porta sem malesuada magna. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur.</p>
               <ul class="icon-list">
                 <li><i class="fa fa-map"></i>Australia 108. <br>70 Southbank Boulevard, Southbank 3006</li>
                 <li><i class="fa fa-envelope"></i><a href="mailto:first.last@email.com" class="nocolor">imailboxneil@email.com</a></li>

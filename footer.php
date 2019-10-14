@@ -16,15 +16,13 @@
   <!-- Footer Section -->
   <footer class="dark-wrapper inverse-text">
     <div class="sub-footer">
-      <div class="container inner text-center"> <img src="#" srcset="<?php echo get_stylesheet_directory_uri(); ?>/style/images/logo-light.png 1x, <?php echo get_stylesheet_directory_uri(); ?>/style/images/logo-light@2x.png 2x" alt="" />
+      <div class="container inner text-center"> <img src="#" srcset="<?php echo get_stylesheet_directory_uri(); ?>/style/images/LFIM-bw.png 1x, <?php echo get_stylesheet_directory_uri(); ?>/style/images/LFIM-bw-2x.png 2x" alt="" />
         <div class="space25"></div>
-        <p>© 2018 Brailie. All rights reserved. Theme by elemis.</p>
+        <p>© 2019 Life in Melbourne. All rights reserved. Build by Neil.</p>
         <div class="space30"></div>
         <ul class="social social-bg social-s">
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-weibo"></i></a></li>
           <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
           <li><a href="#"><i class="fa fa-instagram"></i></a></li>
         </ul>
       </div>

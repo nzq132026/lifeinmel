@@ -9,8 +9,8 @@
     ?>
   <!-- Main Header Section -->
   <section id="main-header">
-    <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/bg4.jpg">
-      <div class="container inner pt-120 pb-120 text-center">
+    <div class="wrapper image-wrapper bg-image inverse-text background-overlay" data-image-src="<?php the_field('header_bg'); ?>">
+      <div class="container inner pt-250 pb-120 text-center">
         <h1 class="heading mb-0">About Me</h1>
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
       </div>
@@ -25,7 +25,7 @@
         <h2 class="section-title mb-40 text-center">Who is Behind All This?</h2>
         <div class="row">
           <div class="col-lg-6 text-md-center">
-            <figure><img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/about3.jpg" alt=""></figure>
+            <figure><img src="<?php the_field('feature_img'); ?>" alt=""></figure>
           </div>
           <!-- /column -->
           <div class="space30 d-block d-lg-none d-xl-none"></div>
@@ -36,12 +36,10 @@
               <footer class="blockquote-footer">Connor Gibson</footer>
             </blockquote>
             <p>Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies.</p>
-            <ul class="social social-color social-s mb-15">
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+            <ul class="social social-color social-m">
+              <li><a href="https://weibo.com/shippo0714"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="https://www.facebook.com/Neil132026"><i class="fa fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/ailurophile_n/"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
           <!-- /column --> 
@@ -69,13 +67,13 @@
           <!--/column -->
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-cafe_hot-coffee"></i> </div>
-            <h3 class="value">3472</h3>
+            <h3 class="value"><?php the_field('shutter_count'); ?></h3>
             <p class="text-uppercase color-dark mb-0">Shutter count</p>
           </div>
           <!--/column -->
           <div class="col-md-3 text-center">
             <div class="icon fs-54 icon-color color-dark mb-15"> <i class="si-electronics_tv"></i> </div>
-            <h3 class="value">2184</h3>
+            <h3 class="value"><?php the_field('pictures'); ?></h3>
             <p class="text-uppercase color-dark mb-0">Pictures taken</p>
           </div>
           <!--/column -->

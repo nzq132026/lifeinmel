@@ -129,16 +129,23 @@
         <?php while( have_rows('gallery') ): the_row();
             $image = get_sub_field('image');
             $category = get_sub_field('category');
+            $title = get_sub_field('title');
             $description = get_sub_field('description');
             ?>
 
         <!-- Gallery item -->
         <div class="cbp-item <?php echo $category; ?>">
-          <figure class="overlay overlay2"><a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>" alt="" />
+          <figure class="overlay overlay1"><a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>" alt="" />
             <div id="caption<?php echo $image['id']; ?>" class="d-none">
               <p><?php echo $description; ?></p>
             </div>
             </a>
+            <figcaption class="d-flex text-left">
+              <div class="align-self-end mt-auto">
+                <h5><?php echo $title; ?></h5>
+                <p><?php echo $description; ?></p>
+              </div>
+            </figcaption>
           </figure>
         </div>
         <?php endwhile; ?>
@@ -148,76 +155,49 @@
   </section>
 
   <!-- Recent Blogs Section -->
-  <section id="recent-blogs">
+  <section id="recent-single-blog">
     <div class="wrapper dark-wrapper inverse-text">
       <div class="container inner">
-        <h2 class="title-color mb-30 color-dark text-center">From My Journal</h2>
+        <h2 class="title-color mb-30 color-dark text-center">From my recent blogs</h2>
         <div class="swiper-container-wrapper swiper-col3" data-aos="fade">
           <div class="swiper-container text-center">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <figure class="overlay overlay2 mb-25"><a href="#"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/ib1.jpg" alt="" /></a></figure>
-                <div class="post-content pl-10 pr-10">
-                  <div class="meta"><span class="date">12 Nov 2017</span><span class="comments"><a href="#">2</a></span><span class="category"><a href="#">Simple</a></span></div>
-                  <h2 class="post-title"><a href="blog-post.html">Ligula tristique quis risus eget urna mollis ornare porttitor</a></h2>
-                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque. Nullam id dolor id nibh.</p>
-                  <a href="#" class="more">Read more</a> </div>
-                <!-- /.swiper-slide-content --> 
+            <?php
+                $args = array(
+                    'category_name' => 'travel, experience, memory, life',
+                    'order'     => 'DESC',
+                    );
+                $posts = new WP_Query( $args );
+                $postCount = 0;
+                if($posts->have_posts()):
+            ?>
+              <div class="swiper-wrapper">
+                <?php while ( $posts->have_posts() ) : $posts->the_post(); $postCount++; ?>
+                <div class="swiper-slide">
+                  <figure class="overlay overlay3 mb-25">
+                    <a href="<?php the_permalink(); ?>"> 
+                      <?php echo get_the_post_thumbnail($post_id, 'medium', array( 'class' => 'card-img-top' )); ?></a>
+                      <figcaption class="d-flex">
+                        <div class="align-self-center mx-auto"><i class="fa fa-link"></i></div>
+                      </figcaption>
+                  </figure>
+                  <div class="post-content pl-10 pr-10">
+                    <div class="meta">
+                      <span class="date"><?php the_time('Y-m-d'); ?></span>
+                      <span class="comments"><a href="<?php the_permalink(); ?>"><?php comments_number( '0', '1', '%' ); ?></a></span>
+                      <span class="category"><?php the_category(', '); ?></span>
+                    </div>
+                    <h2 class="post-title"><a href="<?php the_permalink(); ?>">"<?php the_title_attribute(); ?>"</a></h2>
+                    <p><?php echo apply_filters('the_content', substr(get_the_content(), 0, 300) ); ?>...</p>
+                    <a href="<?php the_permalink(); ?>" class="more">Read more</a> 
+                  </div>
+                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <!-- /.swiper-slide -->
               </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <figure class="overlay overlay2 mb-25"><a href="#"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/ib2.jpg" alt="" /></a></figure>
-                <div class="post-content pl-10 pr-10">
-                  <div class="meta"><span class="date">12 Nov 2017</span><span class="comments"><a href="#">4</a></span><span class="category"><a href="#">Still Life</a></span></div>
-                  <h2 class="post-title"><a href="blog-post.html">Nullam id dolor elit id nibh pharetra augue venenatis faucibus</a></h2>
-                  <p>Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante porttitor mollis sagittis lacus ultricies vehicula.</p>
-                  <a href="#" class="more">Read more</a> </div>
-                <!-- /.swiper-slide-content --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <figure class="overlay overlay2 mb-25"><a href="#"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/ib3.jpg" alt="" /></a></figure>
-                <div class="post-content pl-10 pr-10">
-                  <div class="meta"><span class="date">12 Nov 2017</span><span class="comments"><a href="#">6</a></span><span class="category"><a href="#">Minimalist</a></span></div>
-                  <h2 class="post-title"><a href="blog-post.html">Ultricies fusce porta elit pharetra augue faucibus vulputate</a></h2>
-                  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus. Tellus vulputate non magna eget urna. Donec sed.</p>
-                  <a href="#" class="more">Read more</a> </div>
-                <!-- /.swiper-slide-content --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <figure class="overlay overlay2 mb-25"><a href="#"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/ib4.jpg" alt="" /></a></figure>
-                <div class="post-content pl-10 pr-10">
-                  <div class="meta"><span class="date">12 Nov 2017</span><span class="comments"><a href="#">8</a></span><span class="category"><a href="#">Urban</a></span></div>
-                  <h2 class="post-title"><a href="blog-post.html">Morbi leo risus porta eget metus est non commodolacus non commodo</a></h2>
-                  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Curabitur blandit tempus. Vivamus sagittis.</p>
-                  <a href="#" class="more">Read more</a> </div>
-                <!-- /.swiper-slide-content --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <figure class="overlay overlay2 mb-25"><a href="#"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/ib5.jpg" alt="" /></a></figure>
-                <div class="post-content pl-10 pr-10">
-                  <div class="meta"><span class="date">12 Nov 2017</span><span class="comments"><a href="#">2</a></span><span class="category"><a href="#">Pets</a></span></div>
-                  <h2 class="post-title"><a href="blog-post.html">Mollis adipiscing lorem quis mollis eget lacinia faucibus vestibulum</a></h2>
-                  <p>Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor rutrum faucibus dolor.</p>
-                  <a href="#" class="more">Read more</a> </div>
-                <!-- /.swiper-slide-content --> 
-              </div>
-              <!-- /.swiper-slide -->
-              <div class="swiper-slide">
-                <figure class="overlay overlay2 mb-25"><a href="#"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/style/images/art/ib6.jpg" alt="" /></a></figure>
-                <div class="post-content pl-10 pr-10">
-                  <div class="meta"><span class="date">12 Nov 2017</span><span class="comments"><a href="#">9</a></span><span class="category"><a href="#">Still Life</a></span></div>
-                  <h2 class="post-title"><a href="blog-post.html">Fusce mattis euismod sed diam eget risus amet tempus commodo</a></h2>
-                  <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor nullam dolor.</p>
-                  <a href="#" class="more">Read more</a> </div>
-                <!-- /.swiper-slide-content --> 
-              </div>
-              <!-- /.swiper-slide --> 
-            </div>
             <!-- /.swiper-wrapper --> 
           </div>
+        <?php endif; ?>
           <!-- .swiper-container -->
           <div class="swiper-pagination gap-small"></div>
         </div>

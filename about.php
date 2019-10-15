@@ -9,7 +9,7 @@
     ?>
   <!-- Main Header Section -->
   <section id="main-header">
-    <div class="wrapper image-wrapper bg-image inverse-text background-overlay" data-image-src="<?php the_field('header_bg'); ?>">
+    <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="<?php the_field('header_bg'); ?>">
       <div class="container inner pt-250 pb-120 text-center">
         <h1 class="heading mb-0">About Me</h1>
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
